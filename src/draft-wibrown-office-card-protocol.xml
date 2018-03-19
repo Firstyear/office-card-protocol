@@ -81,6 +81,9 @@
         The Card Initiator MUST provide some form of temporary location pointer via a disposable text interface such as
         a "post it note" or "note paper" to allow returning of the Card from a Card Signing Party to the Card Initiator.
         </t>
+        <t>The Card Initiator MAY identify a series of Card Signing Parties. This list can be attached with a
+        disposable text interface allowing future Card Signing Parties to make informed routing decisions.
+        </t>
         <t>The Card Initiator MUST identify a possible starting port for the Card into the network of Card Signing Parties.
         </t>
     </section>
@@ -95,10 +98,14 @@
         friendship or more. Content of signatures is beyond the scope of this document. As signatures are public information only
         appropriate content MUST be signed.
         </t>
+        <t>If a Card Signing Party List is attached on a disposable text interface, and the Card Signing Party identifies themself
+        on this list, they should mark their identifier from the disposable text interface to prevent a routing loop from forming.
+        </t>
         <t>The Card Signing Party who physically holds the Card is always responsible for routing decisions. The Card Signing Party SHOULD
         communicate with other nearby potential Card Signing Parties for verification of routing oppurtunities. Card Signing Parties who have
         already signed the card MAY accept the Card to provide further routing into the Card Signing Network. A Card Signing Party who has NOT
-        signed the Card always has a higher routing priority than a Card Signing Party who has previously signed the Card.
+        signed the Card always has a higher routing priority than a Card Signing Party who has previously signed the Card. If a Card Signing
+        Party list exists on the Card, then this SHOULD be used to inform routing decisions.
         </t>
         <t>As the Card is routed through the Card Signing Network, Card Signing Parties should take note of density of signatures and the
         potential network distance relative to the Card Initator. If the density becomes high, then further signatures MUST not be created, and
