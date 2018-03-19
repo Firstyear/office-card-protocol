@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<!DOCTYPE rfc SYSTEM "rfc2629.dtd" [
+
+]>
+
+<?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
+
+<?rfc strict="yes" ?>
+<?rfc toc="yes"?>
+<?rfc tocdepth="4"?>
+<?rfc symrefs="yes"?>
+<?rfc sortrefs="yes" ?>
+<?rfc compact="yes" ?>
+<?rfc subcompact="no" ?>
+<rfc category="std" docName="draft-wibrown-office-card-protocol-00" ipr="trust200902">
+
+<front>
+
+    <title abbrev="Office Card Protocol">Office Card Protocol</title>
+
+
+   <author fullname="William Brown" initials="W.B." surname="Brown">
+     <organization>Blackhat Networks Australia</organization>
+
+     <address>
+
+       <phone></phone>
+
+       <email>william@blackhats.net.au</email>
+
+       <!-- uri and facsimile elements may also be added -->
+     </address>
+   </author>
+
+   <date year="2018"></date>
+   <workgroup>Internet Engineering Task Force</workgroup>
+
+    <!-- I am not sure of the appropriate keywords here -->
+   <keyword>draft-wibrown-office-card-protocol</keyword>
+
+   <abstract>
+        <t>In the modern workplace it is customary for employees to sign cards of well-wishes to associates who are
+        departing or experiencing an emotional event (positive or negative). These cards are generally of large physical dimensions relative to
+        cards given to others. The large size of these cards relates to the ability for the cards to hold numerous
+        signatures and emotionally inspired messages to the associate. Creation of these signatures must be done in
+        private so that the effect of the card can be fully realised for the recipient. Many institutes however have
+        synchronisation issues with the signing and delivery of these cards. A protocol for card management is required
+        to ensure that all signatures are delivered correctly to the recipient.
+        </t>
+   </abstract>
+</front>
+
+<middle>
+
+    <section title="Card Terminology">
+        <t>The Card. The card is a large piece of cardboard, generally with colourful artwork and a witty remark printed
+        upon it's surface. The card contains ample white space which is used for notation of small feeling oriented messages.
+        </t>
+        <t>Card Receiver. This is the individual whom the Card is destined for. The Card Receiver MUST not be aware
+        of the instantiation of the Office Card Protocol.
+        </t>
+        <t>Card Initiator. The Card Initiator is generally a person with a relationship to the Card Receiver. This individual
+        believes a life event of signifgance has or will occur and initiates the Office Card Protocol. It is beyond the scope of this document to
+        determine all possible scenarioes in which a card may be instaniated by the Card Initiator.
+        </t>
+        <t>Card Signing Party. A Card Signing Party is an individual who is requested to sign the the card. It is beyond
+        the scope of this document to determine all office social relationships where a Card Signing Party MAY feel the
+        requirment to sign the Card.
+        </t>
+    </section>
+
+    <section title="Initialisation">
+        <t>The Card Initiator determines an event is occuring related to the Card Receiver that warrants the creation of
+        the Card. The Card Initiator SHOULD determine from their available budget an appropriate amount to spend on the
+        acquisition of the Card. Additionally, the Card Initiator SHOULD choose a card with an appropriate emotional or
+        comical artwork or text relevant to the situation experienced by the Card Receiver. It is beyond the scope
+        of this document to discuss appropriate Card artworks or messages. We assume the Card Initiator has an appropriate
+        relationship with the Card Receiver to make an informed decision on appropriate card content.
+        </t>
+        <t>The Card Initiator provides the original signature - The Card Initiator may also be a Card Signing Party.
+        The Card Initiator MUST provide some form of temporary location pointer via a disposable text interface such as
+        a "post it note" or "note paper" to allow returning of the Card from a Card Signing Party to the Card Initiator.
+        </t>
+        <t>The Card Initiator MUST identify a possible starting port for the Card into the network of Card Signing Parties.
+        </t>
+    </section>
+
+    <section title="Card Signing Network Operations">
+        <t>The Card Initiator delivers the card to a Card Signing Party. The Card Signing Party must make a series of decisions
+        related to the Card.
+        </t>
+        <t>The Card Signing Party MUST choose if they have an appropriate relationship with the Card Receiver to issue a signature.
+        If not relationship is determined the Card Signing Party omits a signature. If a relationship is found, a signature MAY be
+        created. The content of the signature is dependent on many factors such as working relationship, length of relationship in time,
+        friendship or more. Content of signatures is beyond the scope of this document. As signatures are public information only
+        appropriate content MUST be signed.
+        </t>
+        <t>The Card Signing Party who physically holds the Card is always responsible for routing decisions. The Card Signing Party SHOULD
+        communicate with other nearby potential Card Signing Parties for verification of routing oppurtunities. Card Signing Parties who have
+        already signed the card MAY accept the Card to provide further routing into the Card Signing Network. A Card Signing Party who has NOT
+        signed the Card always has a higher routing priority than a Card Signing Party who has previously signed the Card.
+        </t>
+        <t>As the Card is routed through the Card Signing Network, Card Signing Parties should take note of density of signatures and the
+        potential network distance relative to the Card Initator. If the density becomes high, then further signatures MUST not be created, and
+        the card MUST be returned the the Card Initator. If the Card Signing Party believes the distance of the Card from the Card Initiator
+        is too high then the Card SHOULD be returned to the Card Initator.
+        </t>
+        <t>If a routing decision can not be reached, the card MUST be return via the address pointer to the Card Initator.
+        </t>
+        <t>The Card Initator may inspect the Card and determine that the signature density is insufficent and MAY reinsert the Card into the
+        Card Signing Network at a different entry location (aka Card Signing Party). The Card Signing Party may indicate that they
+        have already provided a signature and MAY reject the reinsertion. The Card Initator must then attempt a new reinsertion location.
+        </t>
+    </section>
+
+    <section title="Delivery of The Card">
+        <t>Once the Card Initator has determined the Card contains sufficent signature density they can cease the Card Signing Network
+        operations.
+        </t>
+        <t>The Card MUST be presented to the Card Receiver. The Card presentation SHOULD be at an event appropriate to the nature of the
+        card. It is beyond the scope of this document to determine appropriate presentation techniques or events.
+        </t>
+        <t>Once the Card is presented, the Card Receiver SHOULD read and validate all provided signatures. Once the Card Receiver has
+        validated the signature content, the protocol is complete.
+        </t>
+    </section>
+
+</middle>
+
+<back>
+
+</back>
+
+</rfc>
+
